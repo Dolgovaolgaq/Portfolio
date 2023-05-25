@@ -148,7 +148,7 @@
 }
 .bg-body-p1 {
   color: #fff;
-  min-height: 500px;
+  min-height: 800px;
   background-image: url("../img/готовое.jpg");
   background-size: cover;
   background-repeat: no-repeat, repeat;
@@ -159,7 +159,7 @@
 }
 .bg-body-p2 {
   color: #8e8e8e;
-  min-height: 500px;
+  min-height: 800px;
   background-image: url("../img/и\ это\ тоже4444\ копия.jpg");
   background-size: cover;
   background-repeat: no-repeat, repeat;
