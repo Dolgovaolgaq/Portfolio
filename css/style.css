@@ -152,12 +152,20 @@
 }
 
 .bg-body-p2 {
-  color: #ffffff;
-  min-height: 500px;
-  background-image: url("../img/childrenroom.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #cccccc;
+	color: #ffffff;
+	min-height: 500px;
+	background-image: url("../img/childrenroom.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #cccccc;
+	background-position: center;
+}
+.bg-body-portfolio {
+	color: #ffffff;
+	background-image: url("../img/room.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #cccccc;
 	background-position: center;
 }
 
@@ -245,4 +253,34 @@
 
 .wrapper:hover .image-wrapper {
 	width: 800px;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+figure {
+	margin: 0;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin-bottom: 10px;
+	break-inside: avoid;
+}
+
+figure>img {
+	grid-row: 1 / -1;
+	grid-column: 1 ;
+}
+
+figure a {
+	color: black;
+	text-decoration: none;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: masonry;
+	gap: 5px;
 }
