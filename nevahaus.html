@@ -13,9 +13,8 @@
 			integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
 			crossorigin="anonymous"
 		/>
-
 		<link rel="icon" href="" />
-
+		<script src="js/scripts.js"></script>
 		<style></style>
 		<link href="css/style.css" rel="stylesheet" />
 	</head>
@@ -83,37 +82,141 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="grid">
-							<figure>
-								<img src="./img/room1.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/room2.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/livingroom.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/room.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/livingroom1.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/bedroom2.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/childrenroom.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/bedroom.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/bedroom1.jpg" />
-							</figure>
-							<figure>
-								<img src="./img/room3.jpg" />
-							</figure>
+						<div class="column">
+							<img
+								src="./img/room1.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(1)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/room2.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(2)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/livingroom.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(3)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/room.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(4)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/livingroom1.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(5)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/bedroom2.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(6)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/childrenroom.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(7)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/bedroom.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(8)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/bedroom1.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(9)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+						<div class="column">
+							<img
+								src="./img/room3.jpg"
+								style="width: 100%"
+								onclick="openModal();currentSlide(10)"
+								class="hover-shadow cursor"
+							/>
+						</div>
+					</div>
+
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+							<div class="mySlides">
+								<div class="numbertext">1 / 10</div>
+								<img src="./img/room1.jpg" style="width: 100%" />
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 10</div>
+								<img src="./img/room2.jpg" style="width: 100%" />
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 10</div>
+								<img src="./img/livingroom.jpg" style="width: 100%" />
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 10</div>
+								<img src="./img/room.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">5 / 10</div>
+								<img src="./img/livingroom1.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">6 / 10</div>
+								<img src="./img/bedroom2.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">7 / 10</div>
+								<img src="./img/childrenroom.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">8 / 10</div>
+								<img src="./img/bedroom.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">9 / 10</div>
+								<img src="./img/bedroom1.jpg" style="width: 100%" />
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">10 / 10</div>
+								<img src="./img/room3.jpg" style="width: 100%" />
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -129,13 +232,17 @@
 					<h5>Мои работы</h5>
 					<ul class="list-unstyled text-small">
 						<li>
-							<a class="link-secondary text-decoration-none" href="#"
+							<a
+								class="link-secondary text-decoration-none"
+								href="./nevahaus.html"
 								>ЖК "Neva Haus"</a
 							>
 						</li>
 						<li>
-							<a class="link-secondary text-decoration-none" href="#"
-								>ЖК "Сибирские просторы"</a
+							<a
+								class="link-secondary text-decoration-none"
+								href="./blackriver.html"
+								>ЖК "Черная речка"</a
 							>
 						</li>
 					</ul>
